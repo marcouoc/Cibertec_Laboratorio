@@ -6,7 +6,7 @@ using System.Web.Mvc;
 using WebDeveloper.Model;
 using WebDeveloper.Repository;
 
-namespace WebDeveloper.Controllers
+namespace WebDeveloper.Areas.Personnel.Controllers
 {
     public class PersonController : Controller
     {
