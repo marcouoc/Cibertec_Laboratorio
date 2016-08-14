@@ -1,5 +1,6 @@
 ﻿@model WebDeveloper.Model.Person
 
+
 @{
     ViewBag.Title = "Create";
 }
@@ -9,6 +10,8 @@
 
 @using (Html.BeginForm()) 
 {
+   
+
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">

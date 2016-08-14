@@ -1,7 +1,15 @@
-﻿@{
+﻿@using WebDeveloper.Helpers;
+
+
+
+@{
     ViewBag.Title = "Home Page";
 }
+
+
 
 <div class="row">
     <h1>Index Action</h1>
 </div>
+
+@Html.GetDate("test")
