@@ -16,10 +16,12 @@ namespace WebDeveloper.Areas.Personnel.Controllers
         {
             return View(_person.GetlistBySize(15));
         }
-
+            
         public ActionResult Create()
         {
-            return View();
+
+            return View(); 
+
         }
 
         [HttpPost]
