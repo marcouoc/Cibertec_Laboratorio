@@ -8,6 +8,7 @@ using WebDeveloper.Repository;
 
 namespace WebDeveloper.Areas.Personnel.Controllers
 {
+
     public class PersonController : PersonBaseController<Person>
     {
 
