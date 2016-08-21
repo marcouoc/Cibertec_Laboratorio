@@ -6,9 +6,13 @@
 
 <h1 class="text-danger">Error.</h1>
 <h2 class="text-danger">An error occurred while processing your request.</h2>
-
+@if (Request.IsLocal)
+{
 <div><h2>@Model.ControllerName - @Model.ActionName</h2></div>
 <div><h3>Error message</h3>
     @Model.Exception.Message</div>
-
-    @Model.Exception.StackTrace
+    <div>
+        @Model.Exception.StackTrace
+    </div>
+    
+}

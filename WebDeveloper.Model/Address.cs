@@ -13,8 +13,8 @@ namespace WebDeveloper.Model
         {
             BusinessEntityAddress = new HashSet<BusinessEntityAddress>();
         }
-
-        public int AddressID { get; set; }
+        [Key]
+         public int AddressID { get; set; }
 
         [Required]
         [StringLength(60)]
@@ -35,10 +35,18 @@ namespace WebDeveloper.Model
 
         public Guid rowguid { get; set; }
 
+
+        //[Key]
+       // [DatabaseGenerated(DatabaseGeneratedOption.None)]
+       // public int BusinessEntityAddress { get; set; }
+
+
+       // public virtual BusinessEntityAddress BusinessEntityAddress { get; set; }
+
         public DateTime ModifiedDate { get; set; }
 
         public virtual StateProvince StateProvince { get; set; }
 
-          public virtual ICollection<BusinessEntityAddress> BusinessEntityAddress { get; set; }
+        public virtual ICollection<BusinessEntityAddress> BusinessEntityAddress { get; set; }
     }
 }

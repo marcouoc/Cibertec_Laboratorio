@@ -32,5 +32,7 @@ namespace WebDeveloper.Model
         public virtual AddressType AddressType { get; set; }
 
         public virtual BusinessEntity BusinessEntity { get; set; }
+
+ 
     }
 }

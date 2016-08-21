@@ -19,12 +19,25 @@
                     </button>
                     @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
                 </div>
-                <nav class="navbar-collapse collapse">                    
+                <nav class="navbar-collapse collapse"> 
+                    @if(Request.IsAuthenticated)                  
+                    {
+
+                    
                     <ul class="nav navbar-nav">
-                        <li>@Html.ActionLink("Person", "Index", "Person")</li>
-                        <li><a href="#">Opción 2</a></li>
-                        <li><a href="#">Opción 3</a></li>
+                        <!-- texto q visualizar , control, modelo-->
+                        <li>@Html.ActionLink("Person",
+                           "Index",
+                          new { area = "Personnel", controller="Person"})</li>
+                       
                     </ul>
+                    }
+                    else
+                    {
+
+                    }
+                    <!--llama al cshtml partial -->
+                    @Html.Partial("_loginPartial")
                 </nav>
             </div>
         </div>
